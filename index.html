@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hand Gestures Detection on Mobile Devices — CSE455 Final Project</title>
+    <link rel="stylesheet" href="poster.css">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1">
+    <!-- Based on a poster template from https://github.com/cpitclaudel/academic-poster-template -->
+
+          <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+          <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+    
+    <style type="text/css">
+  html { font-size: 1.15rem }
+</style>
+  </head>
+
+  <body vocab="http://schema.org/" typeof="ScholarlyArticle">
+    <header role="banner">
+      <aside>
+          
+      </aside>
+      <div>
+        <h1 property="headline">Hand Gestures Detection on Mobile Devices</h1>
+                  <h2 property="alternativeHeadline">CSE455 Final Project</h2>
+                <address>
+              <a property="author">Group members: Zihan Lin, Zhengrui Sun, Shaoqi Wang, Apollo Zhu</a>
+<br />  <a property="sourceOrganization">University of Washington</a>
+        </address>
+        <span class="publication-info">
+                      <span property="publisher">Unpublished</span>,
+            <time pubdate property="datePublished" datetime="2020-09-08">September 8, 2020</time>
+                  </span>
+      </div>
+      <aside>
+          
+      </aside>
+    </header>
+
+    <main property="articleBody">
+        <article property="abstract">
+        <header><h3>Problem Description</h3></header>
+
+    <p>We plan to implement real-time hand gesture recognition to run on mobile phones (iOS) without using Apple’s API. Capturing the motions of the hands and interpreting the meanings associated with each gesture.</p>
+
+    <p>The project can have various applications, including enhancing the mobile gaming experience, enabling hand-free control of devices, and facilitating communication for disabled users.</p>
+  </article>
+
+  <article>
+    <header><h3>Previous work</h3></header>
+
+    <p>We are currently detecting single gestures only; a pre-trained full frame classifier is used in place of a combination of detector + classifier. The full frame classifier we are using is a <a href="https://n-usr-2uzac.s3pd12.sbercloud.ru/b-usr-2uzac-mv4/models/ResNext101FF.pth">ResNeXt101</a> model and it is expected to achieve 95.67% accuracy on F1 Gestures.</p>
+  </article>
+
+  <article>
+    <header><h3>Our approach</h3></header>
+    <p><b>We’ll probably use CNN and PyTorch to train the model, but since only CoreML models can be run on iOS devices, we’ll use Apple’s CoreML converter tool to convert the trained model to be suitable for mobile devices. We might experiment with using the iPhone's depth sensor to help with the classification if the depth map improves the accuracy of classification/hand detection.</b></p>
+  </article>
+
+  <article>
+    <header><h3>Video Demo</h3></header>
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+  </article>
+
+  <article>
+    <header><h3>Datasets</h3></header>
+    <p>For training and testing the models, we use the dataset from <a href="https://arxiv.org/abs/2206.08219">https://arxiv.org/abs/2206.08219</a>.</p>
+
+    <p>This dataset contains 552,992 samples divided into 18 classes of gestures. The annotations consist of bounding boxes of hands with gesture labels and markups of leading hands. The proposed dataset allows for building HGR systems, which can be used in video conferencing services, home automation systems, the automotive sector, services for people with speech and hearing impairments, etc. We are especially focused on interaction with devices to manage them. That is why all 18 chosen gestures are functional, familiar to the majority of people, and may be an incentive to take some action. In addition, we used crowdsourcing platforms to collect the dataset and took into account various parameters to ensure data diversity. We describe the challenges of using existing HGR datasets for our task and provide a detailed overview of them. Furthermore, the baselines for the hand detection and gesture classification tasks are proposed.</p>
+  </article>
+
+  <article>
+    <header><h3>Results</h3></header>
+
+    <p>(N/A)</p>
+
+    <b>(N/A)</b>
+  </article>
+
+  <article>
+    <header><h3>Discussion</h3></header>
+
+    <p>Input discussion and potential improvements here.</p>
+
+    <ol>
+      <li>Improvement 1</li>
+      <li>Improvement 2</li>
+      <li>Improvement 3</li>
+    </ol>
+  </article>
+
+    </main>
+
+    <footer>
+      <address class="monospace">  <a href="https://github.com/ApolloZhu/CSE455-Final-Project">https://github.com/ApolloZhu/CSE455-Final-Project</a>
+</address>
+      <address class="monospace">  Zihan Lin, Zhengrui Sun, Shaoqi Wang, Apollo Zhu
+</address>
+                    <span class="credits">
+          Based on an <a href="https://github.com/cpitclaudel/academic-poster-template">open poster template</a>.
+        </span>
+          </footer>
+  </body>
+</html>
