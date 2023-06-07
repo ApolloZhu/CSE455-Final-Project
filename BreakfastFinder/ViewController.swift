@@ -91,7 +91,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         rootLayer = previewView.layer
         previewLayer.frame = rootLayer.bounds
-        rootLayer.addSublayer(previewLayer)
+        rootLayer.insertSublayer(previewLayer, at: 0)
     }
     
     func startCaptureSession() {

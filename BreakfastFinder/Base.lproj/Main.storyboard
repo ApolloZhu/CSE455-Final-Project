@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14256" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Vision Object Recognition View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="VisionObjectRecognitionViewController" customModule="VisionCamObjectRecognition_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VisionObjectRecognitionViewController" customModule="BreakfastFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,14 +18,72 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r6-AD-Uii">
+                                <rect key="frame" x="16" y="28" width="343" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uRy-hg-Kai">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIw-SK-1Nr">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jDY-c4-rPk">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjQ-tf-tld">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="y14-0c-cyt"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="bjQ-tf-tld" firstAttribute="centerX" secondItem="jDY-c4-rPk" secondAttribute="centerX" id="Hwy-9e-pPY"/>
+                                                    <constraint firstItem="bjQ-tf-tld" firstAttribute="centerY" secondItem="jDY-c4-rPk" secondAttribute="centerY" id="TID-Ua-tR7"/>
+                                                    <constraint firstItem="bjQ-tf-tld" firstAttribute="width" secondItem="jDY-c4-rPk" secondAttribute="width" id="W8X-QF-9pn"/>
+                                                    <constraint firstItem="bjQ-tf-tld" firstAttribute="height" secondItem="jDY-c4-rPk" secondAttribute="height" id="bHz-pq-PDs"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HIw-SK-1Nr" firstAttribute="centerX" secondItem="uRy-hg-Kai" secondAttribute="centerX" id="G2d-jp-lYI"/>
+                                        <constraint firstItem="HIw-SK-1Nr" firstAttribute="height" secondItem="uRy-hg-Kai" secondAttribute="height" id="Yox-PM-XAx"/>
+                                        <constraint firstItem="HIw-SK-1Nr" firstAttribute="centerY" secondItem="uRy-hg-Kai" secondAttribute="centerY" id="dUB-R1-ZAr"/>
+                                        <constraint firstItem="HIw-SK-1Nr" firstAttribute="width" secondItem="uRy-hg-Kai" secondAttribute="width" id="pVO-4g-ict"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6r6-AD-Uii" secondAttribute="trailing" constant="16" id="ORP-a8-GBV"/>
+                            <constraint firstItem="6r6-AD-Uii" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Q8B-Y0-Woh"/>
+                            <constraint firstItem="6r6-AD-Uii" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="SOp-Tx-vIE"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="bjQ-tf-tld" id="N9U-Nk-Hmy"/>
                         <outlet property="previewView" destination="8bC-Xf-vdC" id="KdU-3x-Jsv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="-1.3493253373313345"/>
         </scene>
     </scenes>
 </document>

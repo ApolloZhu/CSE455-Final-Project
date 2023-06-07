@@ -31,6 +31,7 @@ extension MLMultiArray {
 }
 
 class VisionObjectRecognitionViewController: ViewController {
+    @IBOutlet weak var label: UILabel!
     
     private var detectionOverlay: CALayer! = nil
     
@@ -45,7 +46,8 @@ class VisionObjectRecognitionViewController: ViewController {
             let visionModel = try VNCoreMLModel(for: ResNext101FF(contentsOf: ResNext101FF.urlOfModelInThisBundle).model)
             let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
                 DispatchQueue.main.async {
-                    guard let observation = request.results?.first as? VNCoreMLFeatureValueObservation,
+                    guard let result = request.results?.first else { return }
+                    guard let observation = result as? VNCoreMLFeatureValueObservation,
                           let output = observation.featureValue.multiArrayValue
                     else {
                         print("Wrong result type")
@@ -73,7 +75,9 @@ class VisionObjectRecognitionViewController: ViewController {
                         19: "no gesture",
                     ]
                     let label = labels[output.argmax + 1]
-                    print(label!)
+                    DispatchQueue.main.async {
+                        self.label.text = label
+                    }
                 }
             })
             self.requests = [objectRecognition]
@@ -143,7 +147,7 @@ class VisionObjectRecognitionViewController: ViewController {
                                          width: bufferSize.width,
                                          height: bufferSize.height)
         detectionOverlay.position = CGPoint(x: rootLayer.bounds.midX, y: rootLayer.bounds.midY)
-        rootLayer.addSublayer(detectionOverlay)
+        rootLayer.insertSublayer(detectionOverlay, at: 1)
     }
     
     func updateLayerGeometry() {
