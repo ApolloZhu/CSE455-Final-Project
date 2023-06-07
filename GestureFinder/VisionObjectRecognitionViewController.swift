@@ -17,7 +17,7 @@ import Vision
 
 extension MLMultiArray {
     var argmax: Int {
-        var max: Float = 0
+        var max: Float = self[0].floatValue
         var maxIndex = 0
         for i in 0..<self.count {
             let value = self[i].floatValue

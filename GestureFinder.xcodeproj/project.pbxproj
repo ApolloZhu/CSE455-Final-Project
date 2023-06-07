@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D24B70192A2BAB1A00F5AF8D /* ResNext101FF.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D24B70182A2BAB1A00F5AF8D /* ResNext101FF.mlmodel */; };
-		FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */; };
+		FA4750CA20BF3F48003E19ED /* Gesture Finder Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4750C920BF3F48003E19ED /* Gesture Finder Logo.png */; };
 		FAB417F62099308400494E9C /* VisionObjectRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */; };
 		FAD5009F1ED668B60074D713 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD5009E1ED668B60074D713 /* AppDelegate.swift */; };
 		FAD500A11ED668B60074D713 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD500A01ED668B60074D713 /* ViewController.swift */; };
@@ -21,9 +21,9 @@
 		7984D3D3A63BDFC4A07FEF8F /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		C2A2AB60C2A2AB2000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D24B70182A2BAB1A00F5AF8D /* ResNext101FF.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ResNext101FF.mlmodel; sourceTree = "<group>"; };
-		FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Breakfast Finder Logo.png"; sourceTree = SOURCE_ROOT; };
+		FA4750C920BF3F48003E19ED /* Gesture Finder Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gesture Finder Logo.png"; sourceTree = SOURCE_ROOT; };
 		FAB417F52099308400494E9C /* VisionObjectRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognitionViewController.swift; sourceTree = "<group>"; };
-		FAD5009B1ED668B60074D713 /* BreakfastFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakfastFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD5009B1ED668B60074D713 /* GestureFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD5009E1ED668B60074D713 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD500A01ED668B60074D713 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FAD500A31ED668B60074D713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				C2A2AB60C2A2AB2000000001 /* README.md */,
-				FAD5009D1ED668B60074D713 /* BreakfastFinder */,
+				FAD5009D1ED668B60074D713 /* GestureFinder */,
 				FAD5009C1ED668B60074D713 /* Products */,
 				FA86553BE8674B6BE41BAA64 /* Configuration */,
 			);
@@ -64,12 +64,12 @@
 		FAD5009C1ED668B60074D713 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FAD5009B1ED668B60074D713 /* BreakfastFinder.app */,
+				FAD5009B1ED668B60074D713 /* GestureFinder.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAD5009D1ED668B60074D713 /* BreakfastFinder */ = {
+		FAD5009D1ED668B60074D713 /* GestureFinder */ = {
 			isa = PBXGroup;
 			children = (
 				FAD5009E1ED668B60074D713 /* AppDelegate.swift */,
@@ -79,18 +79,18 @@
 				FAD500A51ED668B60074D713 /* Assets.xcassets */,
 				FAD500A71ED668B60074D713 /* LaunchScreen.storyboard */,
 				D24B70182A2BAB1A00F5AF8D /* ResNext101FF.mlmodel */,
-				FA4750C920BF3F48003E19ED /* Breakfast Finder Logo.png */,
+				FA4750C920BF3F48003E19ED /* Gesture Finder Logo.png */,
 				FAD500AA1ED668B60074D713 /* Info.plist */,
 			);
-			path = BreakfastFinder;
+			path = GestureFinder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FAD5009A1ED668B60074D713 /* BreakfastFinder */ = {
+		FAD5009A1ED668B60074D713 /* GestureFinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAD500AD1ED668B60074D713 /* Build configuration list for PBXNativeTarget "BreakfastFinder" */;
+			buildConfigurationList = FAD500AD1ED668B60074D713 /* Build configuration list for PBXNativeTarget "GestureFinder" */;
 			buildPhases = (
 				FAD500971ED668B60074D713 /* Sources */,
 				FAD500981ED668B60074D713 /* Frameworks */,
@@ -100,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = BreakfastFinder;
+			name = GestureFinder;
 			productName = "VisionCamObjectRecognition-Swift";
-			productReference = FAD5009B1ED668B60074D713 /* BreakfastFinder.app */;
+			productReference = FAD5009B1ED668B60074D713 /* GestureFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FAD500961ED668B60074D713 /* Build configuration list for PBXProject "BreakfastFinder" */;
+			buildConfigurationList = FAD500961ED668B60074D713 /* Build configuration list for PBXProject "GestureFinder" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FAD5009A1ED668B60074D713 /* BreakfastFinder */,
+				FAD5009A1ED668B60074D713 /* GestureFinder */,
 			);
 		};
 /* End PBXProject section */
@@ -145,7 +145,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4750CA20BF3F48003E19ED /* Breakfast Finder Logo.png in Resources */,
+				FA4750CA20BF3F48003E19ED /* Gesture Finder Logo.png in Resources */,
 				FAD500A91ED668B60074D713 /* LaunchScreen.storyboard in Resources */,
 				FAD500A61ED668B60074D713 /* Assets.xcassets in Resources */,
 				FAD500A41ED668B60074D713 /* Main.storyboard in Resources */,
@@ -314,7 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = 2H866F22W7;
-				INFOPLIST_FILE = BreakfastFinder/Info.plist;
+				INFOPLIST_FILE = GestureFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.BreakfastFinder${SAMPLE_CODE_DISAMBIGUATOR}";
@@ -334,7 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
 				DEVELOPMENT_TEAM = 2H866F22W7;
-				INFOPLIST_FILE = BreakfastFinder/Info.plist;
+				INFOPLIST_FILE = GestureFinder/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.BreakfastFinder${SAMPLE_CODE_DISAMBIGUATOR}";
@@ -348,7 +348,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FAD500961ED668B60074D713 /* Build configuration list for PBXProject "BreakfastFinder" */ = {
+		FAD500961ED668B60074D713 /* Build configuration list for PBXProject "GestureFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAD500AB1ED668B60074D713 /* Debug */,
@@ -357,7 +357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAD500AD1ED668B60074D713 /* Build configuration list for PBXNativeTarget "BreakfastFinder" */ = {
+		FAD500AD1ED668B60074D713 /* Build configuration list for PBXNativeTarget "GestureFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FAD500AE1ED668B60074D713 /* Debug */,
